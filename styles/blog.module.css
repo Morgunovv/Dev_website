@@ -1,0 +1,132 @@
+/* Стили для списка блога */
+.blogList {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.blogItem {
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.blogItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.blogItem h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.blogItem .date {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+.blogItem .summary {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.blogItem .readMore {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #0070f3;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+.blogItem .readMore:hover {
+    background: #0051b3;
+}
+
+/* Стили для отдельной статьи */
+.blogPost {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.blogPost h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.blogPost .date {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 2rem;
+}
+
+.blogPost .featuredImage {
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.blogPost .featuredImage img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.blogPost .content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.blogPost .content p {
+    margin-bottom: 1.5rem;
+}
+
+.blogPost .content h2,
+.blogPost .content h3 {
+    margin: 2rem 0 1rem;
+}
+
+.blogPost .content img {
+    max-width: 100%;
+    margin: 1.5rem 0;
+    border-radius: 5px;
+}
+
+.blogPost .content ul,
+.blogPost .content ol {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+}
+
+.blogPost .content blockquote {
+    border-left: 4px solid #0070f3;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #555;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .blogPost h1 {
+        font-size: 2rem;
+    }
+
+    .blogItem h2 {
+        font-size: 1.3rem;
+    }
+}
