@@ -56,11 +56,9 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
     const pageMeta = plasmicData.entryCompMetas[0];
 
-    // Минимизируем данные, сохраняя только необходимое
-    const minimalPlasmicData = {
-      entryCompMetas: plasmicData.entryCompMetas,
-      // Используем только необходимые данные
-      ...(plasmicData as any)
+    // Минимизируем данные, но сохраняем необходимые компоненты
+    const minimalPlasmicData: ComponentRenderData = {
+      ...(plasmicData as ComponentRenderData)
     };
 
     // Cache the necessary data fetched for the page
