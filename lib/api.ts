@@ -71,7 +71,20 @@ export async function getGlobalData() {
     try {
         const response = await apiClient.get('/global', {
             params: {
-                populate: 'deep,5'
+                populate: {
+                    logo: {
+                        populate: '*'
+                    },
+                    seo: {
+                        populate: '*'
+                    },
+                    navigation: {
+                        populate: '*'
+                    },
+                    footer: {
+                        populate: '*'
+                    }
+                }
             }
         });
         return response.data;

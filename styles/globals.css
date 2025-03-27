@@ -40,3 +40,10 @@ a {
     color-scheme: dark;
   }
 }
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  min-height: calc(100vh - 100px);
+}

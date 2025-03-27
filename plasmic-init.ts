@@ -4,6 +4,7 @@ import { StrapiItem } from "./components/StrapiItem";
 import { BlogList } from "./components/BlogList";
 import { BlogPost } from "./components/BlogPost";
 import { GlobalData } from "./components/GlobalData";
+import { Header } from "./components/Header";
 
 export const PLASMIC = initPlasmicLoader({
   projects: [
@@ -130,6 +131,17 @@ PLASMIC.registerComponent(GlobalData, {
         value: "Глобальные данные"
       },
       renderPropParams: ["data", "loading"]
+    }
+  }
+});
+
+// Регистрируем компонент шапки сайта
+PLASMIC.registerComponent(Header, {
+  name: "Header",
+  props: {
+    className: {
+      type: "string",
+      helpText: "Класс CSS для стилизации шапки"
     }
   }
 });
